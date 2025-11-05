@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/tv_result_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🤍 소개팅 결과 🤍"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"/>
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_result_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="점수: --점"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="소개팅 시간: 00:00"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_vibration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_duration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="진동 울린 횟수"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_vibration_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_vibration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="남(0회) 여(0회)"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_back_to_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메인으로 돌아가기"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"/>
+
+</RelativeLayout>
