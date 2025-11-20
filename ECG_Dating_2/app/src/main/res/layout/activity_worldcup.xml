@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_pink">
+
+    <TextView
+        android:id="@+id/tv_round_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/cardview_dark_background"
+        android:text="16강"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <!-- 왼쪽 아이템 -->
+    <LinearLayout
+        android:id="@+id/layout_left_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_round_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="20dp"> <!-- 모서리 둥글게 -->
+            <ImageView
+                android:id="@+id/iv_left_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_left_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이템1"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+    <!-- 오른쪽 아이템 -->
+    <LinearLayout
+        android:id="@+id/layout_right_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layout_left_item"
+        app:layout_constraintBottom_toBottomOf="@id/layout_left_item"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="20dp"> <!-- 모서리 둥글게 -->
+            <ImageView
+                android:id="@+id/iv_right_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_right_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이템2"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+    <!-- 중앙 분리선 -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <!-- VS 텍스트 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VS"
+        android:textSize="30sp"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layout_left_item"
+        app:layout_constraintBottom_toBottomOf="@id/layout_left_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

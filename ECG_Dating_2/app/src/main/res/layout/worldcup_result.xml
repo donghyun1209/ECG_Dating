@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="@color/background_pink">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="당신의 최종 선택은!"
+        android:textSize="28sp"
+        android:textColor="@color/main_pink"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="16dp">
+        <ImageView
+            android:id="@+id/iv_winner_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_winner_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="우승자 이름"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+        android:id="@+id/btn_back_to_choice"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="다른 주제로 하기"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btn_back_to_conversation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="돌아가기"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+</LinearLayout>

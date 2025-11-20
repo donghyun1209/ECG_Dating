@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="@color/background_pink"> <!-- 배경색 적용 -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="어떤 월드컵을 시작할까요?"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+        android:id="@+id/btn_food_worldcup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="음식 이상형 월드컵"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btn_date_worldcup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="데이트 이상형 월드컵"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+</LinearLayout>
