@@ -105,7 +105,7 @@ public class ConversationActivity extends AppCompatActivity {
         }).start();
     }
 
-    // 3초마다 데이터를 생성하고 DB에 저장 (Log)
+    // 10초마다 데이터를 생성하고 DB에 저장 (Log)
     private void startHeartRateMonitoring() {
         monitoringTimer = new Timer();
         Random random = new Random();
@@ -113,7 +113,7 @@ public class ConversationActivity extends AppCompatActivity {
         // DB 인스턴스 미리 가져오기
         AppDatabase db = AppDatabase.getDBInstance(this);
 
-        // 0초 대기 후 시작, 3초(3000ms)마다 반복
+        // 0초 대기 후 시작, 10초(10000ms)마다 반복
         monitoringTimer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -156,7 +156,7 @@ public class ConversationActivity extends AppCompatActivity {
                     }
                 }
             }
-        }, 0, 3000);
+        }, 0, 10000);
     }
 
     // [핵심 기능 2] 눈 마주치기 팝업 및 카운트다운
